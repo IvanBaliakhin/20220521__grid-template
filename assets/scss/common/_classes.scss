@@ -12,4 +12,10 @@
   letter-spacing: 0.1em;
   border: 2px solid $color-light;
   background-color: rgb($color-light, 0.1);
+  transition: background-color 0.5s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
 }
