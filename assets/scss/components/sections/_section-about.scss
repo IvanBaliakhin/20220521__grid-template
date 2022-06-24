@@ -10,12 +10,10 @@
     padding-top: 100px;
     padding-bottom: 100px;
   }
-
   @include lg-md {
     padding-top: 80px;
     padding-bottom: 80px;
   }
-
   @include md {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -23,23 +21,20 @@
 
   &__container {
     display: grid;
-    @extend %container;
 
+    @extend %container;
     @include lg-min {
       gap: $gap-x5;
       grid-template-columns: 1fr 271px;
     }
-
     @include lg-md {
       gap: $gap-x2;
       grid-template-columns: 1fr 271px;
     }
-
     @include md-sm {
       gap: $gap;
       grid-template-columns: 1fr 236px;
     }
-
     @include sm {
       gap: $gap;
       grid-template-columns: 1fr;
@@ -58,28 +53,29 @@
 
       &:first-of-type {
         position: relative;
+
         margin-top: -5px;
 
         &::after {
           position: absolute;
           top: 0;
+
           width: 2px;
           height: 200px;
+
           content: "";
+
           background-color: rgba(99, 117, 136, 0.1);
 
           @include lg-min {
             right: -50px;
           }
-
           @include lg-md {
             right: -20px;
           }
-
           @include md-sm {
             right: -10px;
           }
-
           @include sm {
             display: none;
           }
@@ -95,6 +91,7 @@
   &__image {
     display: grid;
     align-content: center;
+
     justify-items: center;
 
     & img {

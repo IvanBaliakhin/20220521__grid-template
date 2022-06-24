@@ -3,44 +3,53 @@
 
 .skill-item {
   position: relative;
-  background-color: $color-primary;
+
   overflow: hidden;
 
+  background-color: $color-primary;
+
   &__title {
-    margin: 0;
-    @include abs-position;
     z-index: 1;
+
+    margin: 0;
+
     letter-spacing: 0.1em;
 
+    @include abs-position;
     @include md-min {
       font-size: 1.25rem;
     }
-
     @include md {
       font-size: 1.125rem;
     }
   }
 
   &__image {
-    @include abs-position;
+    transition: transform 0.5s;
+
     background-position: 50% 50%;
     background-size: cover;
-    transition: transform 0.5s;
+
+    @include abs-position;
   }
 
   &__overlay {
-    @include abs-position;
-    background-color: $color-primary;
-    opacity: 0.8;
     transition: opacity 0.5s;
+
+    opacity: 0.8;
+    background-color: $color-primary;
+
+    @include abs-position;
   }
 
   &__link {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: $gap;
+    justify-content: center;
+
     height: 100%;
+    padding: $gap;
+
     transition: color 0.5s;
   }
 
